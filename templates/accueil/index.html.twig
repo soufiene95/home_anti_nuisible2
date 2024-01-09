@@ -1,20 +1,52 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello AccueilController!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+<nav class="row justify-content-around mx-0 m-5">
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+        <div class="card shadowBlue m-3 col-xl-3 col-lg-3 col-md-6 col-sm-2 rounded" style="width: 18rem;">
+            <img src="{{asset("/image/rat9.png")}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Deratisation</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's
+                    content.</p>
+                <a href="/formulaire" class="btn btn-primary rounded">Choisir</a>
+            </div>
+        </div>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Users/soufi/Desktop/home_anti_nuisible2/home_anti_nuisible2/src/Controller/Accueil/AccueilController.php'|file_link(0) }}">src/Controller/Accueil/AccueilController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Users/soufi/Desktop/home_anti_nuisible2/home_anti_nuisible2/templates/accueil/accueil/index.html.twig'|file_link(0) }}">templates/accueil/accueil/index.html.twig</a></code></li>
-    </ul>
-</div>
+        <div class="card shadowBlue m-3 col-xl-3 col-lg-3 col-md-6 col-sm-2 rounded" style="width: 18rem;">
+            <img src="{{asset("/image/punaise3.png")}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Punaise de lit</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's
+                    content.</p>
+                <a href="{{path('registration_register')}}" class="btn btn-primary rounded">Choisir</a>
+            </div>
+        </div>
+
+        <div class="card shadowBlue m-3 col-xl-3 col-lg-3 col-md-6 col-sm-2 rounded" style="width: 18rem;">
+            <img src="{{asset("/image/fourmi.png")}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">fourmi</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's
+                    content.</p>
+                <a href="Prestation.html" class="btn btn-primary rounded">Choisir</a>
+            </div>
+        </div>
+
+        <div class="card shadowBlue m-3 col-xl-3 col-lg-3 col-md-6 col-sm-2 rounded" style="width: 18rem;">
+            <img src="{{asset("/image/cafard.png")}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Cafard</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's
+                    content.</p>
+                <a href="Prestation.html" class="btn btn-primary">Choisir</a>
+            </div>
+        </div>
+    </nav>
 {% endblock %}
+

@@ -13,16 +13,15 @@
     <link rel="mask-icon" href="image/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <title>HOME Anti-Nuisible</title>
 </head>
 
 <body>
   <!-- logo avec titre pourt index
-    2 autre liens pour catalogue et inscription 
- -->
- 
+    2 autre liens pour catalogue et inscription -->
+
 
 <div class="container">
         <div class="d-flex justify-content-between align-items-center">
@@ -37,7 +36,7 @@
 
   <form class="m-4 row shadowBlue rounded border border-primary g-3 needs-validation w-50 mx-auto" novalidate>
 
-    <div class="p-2 col-md-12">
+    <div class="p-2 col-md-6">
       <label for="validationCustom04" class="form-label">Type</label>
       <select class="form-select" id="validationCustom04" required>
         <option selected disabled value="">Choix...</option>
@@ -49,6 +48,19 @@
       </div>
     </div>
 
+    <div class="p-2 col-md-6">
+      <label for="validationCustom04" class="form-label">prestation</label>
+      <select class="form-select" id="validationCustom04" required>
+        <option selected disabled value="">Choix...</option>
+        <option>Dératisation</option>
+        <option>Punaise de lit</option>
+        <option>Fourmi</option>
+        <option>Cafard</option>
+      </select>
+      <div class="invalid-feedback">
+        Please select a valid state.
+      </div>
+    </div>
 
     <div class="p-2 col-md-6">
       <label for="validationCustom01" class="form-label">Nom</label>
@@ -62,7 +74,7 @@
       <label for="validationCustom02" class="form-label">Prénom</label>
       <input type="text" class="form-control" id="validationCustom02" value="" required>
       <div class="valid-feedback">
-        Looks good!
+        
       </div>
     </div>
 
@@ -70,26 +82,28 @@
       <label for="validationCustomUsername" class="form-label">Email</label>
       <div class="input-group has-validation">
         <span class="input-group-text" id="inputGroupPrepend">@</span>
-        <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend"
-          required>
+        <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
         <div class="invalid-feedback">
-          Please choose a username.
+          Adresse mail obligatoire.
         </div>
       </div>
     </div>
 
     <div class="p-2 col-md-6">
-      <label for="validationCustom03" class="form-label">Numéro de téléphone</label>
-      <input type="text" class="form-control" id="validationCustom03" required>
-      <div class="invalid-feedback">
-        mot de passe.
+      <label for="validationCustomUsername" class="form-label">Numéro de téléphone</label>
+      <div class="input-group has-validation">
+        <span class="input-group-text" id="inputGroupPrepend">+33</span>
+        <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+        <div class="invalid-feedback">
+          Numéro de téléphone obligatoire.
+        </div>
       </div>
     </div>
 
     <div class="p-2 col-md-12 form-floating">
       <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
         style="height: 100px"></textarea>
-      <label for="floatingTextarea2">Comments</label>
+      <label for="floatingTextarea2">Commentaire</label>
     </div>
 
     </div>

@@ -6,78 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://bootswatch.com/5/cosmo/bootstrap.min.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="image/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="image/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="image/favicon-16x16.png">
-    <link rel="manifest" href="image/site.webmanifest">
-    <link rel="mask-icon" href="image/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{asset('image/apple-touch-icon.png')}}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{asset('image/favicon-32x32.png')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('image/favicon-16x16.png')}}">
+    <link rel="manifest" href="{{asset('image/site.webmanifest')}}">
+    <link rel="mask-icon" href="{{asset('image/safari-pinned-tab.svg')}}" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <title>HOME Anti-Nuisible</title>
 </head>
 
 <body>
-    <!-- logo avec titre -->
-<div class="container">
-        <div class="d-flex justify-content-between align-items-center">
-        <a href="/">
-            <img src="{{asset("/image/H-A-N.JPG")}}" width="200" height="" >
-            </img>
-        </a>
-            <h1 class="text-primary">HOME Anti-Nuisible</h1>
-        </div>
-</div>
-    <!-- 4 cards de produit avec liens(bouton =) pour acceder au au formulaire-->
-    <nav class="row justify-content-around mx-0 m-5">
-
-        <div class="card shadowBlue m-3 col-xl-3 col-lg-3 col-md-6 col-sm-2 rounded" style="width: 18rem;">
-            <img src="{{asset("/image/rat9.png")}}" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Deratisation</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's
-                    content.</p>
-                <a href="/formulaire" class="btn btn-primary rounded">Choisir</a>
+{% block title %}
+    <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="/">
+                    <img src="{{asset("/image/H-A-N.JPG")}}" width="200" height="" >
+                    </img>
+                </a>
+                <h1 class="text-primary">HOME Anti-Nuisible</h1>
             </div>
         </div>
+{% endblock %}
 
-        <div class="card shadowBlue m-3 col-xl-3 col-lg-3 col-md-6 col-sm-2 rounded" style="width: 18rem;">
-            <img src="{{asset("/image/punaise3.png")}}" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Punaise de lit</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's
-                    content.</p>
-                <a href="Prestation.html" class="btn btn-primary rounded">Choisir</a>
-            </div>
-        </div>
+    {% block body %}
+        
+    {% endblock %}
 
-        <div class="card shadowBlue m-3 col-xl-3 col-lg-3 col-md-6 col-sm-2 rounded" style="width: 18rem;">
-            <img src="{{asset("/image/fourmi.png")}}" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">fourmi</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's
-                    content.</p>
-                <a href="Prestation.html" class="btn btn-primary rounded">Choisir</a>
-            </div>
-        </div>
-
-        <div class="card shadowBlue m-3 col-xl-3 col-lg-3 col-md-6 col-sm-2 rounded" style="width: 18rem;">
-            <img src="{{asset("/image/cafard.png")}}" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Cafard</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's
-                    content.</p>
-                <a href="Prestation.html" class="btn btn-primary">Choisir</a>
-            </div>
-        </div>
-    </nav>
-
-<!--pied de page avec lien réseau sociaux et logo agrement-->
+    {% block footer %}
+        <!--pied de page avec lien réseau sociaux et logo agrement-->
     <div class="container text-center">
         <footer class="d-flex justify-content-between align-items-center py-3 my-4">
             <div>
@@ -88,8 +47,11 @@
                 <a href="https://www.leboncoin.fr/prestations_de_services/2440361537.htm"><svg class="bi me-2" width="40" height="32"><img
                     src="../image/lbc.png" width="70"></use></svg></a>
             </div>
-            <img src="{{asset("/image/agrement.jpg")}}" width="300" height="">
+            <a href="{{path('registration_register')}}"><img src="{{asset("/image/agrement.jpg")}}" width="300" height=""></a>
         </footer>
+    </div>
+    {% endblock %}
+
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
