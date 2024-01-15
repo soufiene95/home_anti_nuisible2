@@ -2,51 +2,47 @@
 
 
 {% block body %}
-<nav class="row justify-content-around mx-0 m-5">
-
-        <div class="card shadowBlue m-3 col-xl-3 col-lg-3 col-md-6 col-sm-2 rounded" style="width: 18rem;">
-            <img src="{{asset("/image/rat9.png")}}" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Deratisation</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's
-                    content.</p>
-                <a href="/formulaire" class="btn btn-primary rounded">Choisir</a>
+            {# Cards #}
+    <nav class="row justify-content-around mx-0 m-5">
+        {% for prestation in prestations %}
+            <div class="card shadow border border-primary m-3 col-xl-3 col-lg-3 col-md-6 col-sm-2 rounded" style="width: 18rem;">
+                <img src="{{asset("/image/prestation/" ~ prestation.image )}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{ prestation.prestation }}</h5>
+                    <p class="card-text">
+                        {% if prestation.description|length > 70 %}
+                            {{ prestation.description|slice(0,70) }}...
+                        {% else %}
+                            {{ prestation.description }}
+                        {% endif %}
+                    </p>
+                    <p class="fst-italic text-end">à partir de {{prestation.montant}} €</p>
+                    <button onclick="{{prestation.id}}" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal{{prestation.id}}">
+                        Choisir
+                    </button>
+                </div>
             </div>
-        </div>
 
-        <div class="card shadowBlue m-3 col-xl-3 col-lg-3 col-md-6 col-sm-2 rounded" style="width: 18rem;">
-            <img src="{{asset("/image/punaise3.png")}}" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Punaise de lit</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's
-                    content.</p>
-                <a href="{{path('registration_register')}}" class="btn btn-primary rounded">Choisir</a>
+            {# Modale #}
+            <div class="modal fade" id="exampleModal{{prestation.id}}" data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5">{{prestation.prestation}}</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            {{prestation.description}}
+                        </div>
+                        <div class="modal-footer">
+                        <a href="/formulaire">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Contactez-nous</button>
+                        </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-
-        <div class="card shadowBlue m-3 col-xl-3 col-lg-3 col-md-6 col-sm-2 rounded" style="width: 18rem;">
-            <img src="{{asset("/image/fourmi.png")}}" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">fourmi</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's
-                    content.</p>
-                <a href="Prestation.html" class="btn btn-primary rounded">Choisir</a>
-            </div>
-        </div>
-
-        <div class="card shadowBlue m-3 col-xl-3 col-lg-3 col-md-6 col-sm-2 rounded" style="width: 18rem;">
-            <img src="{{asset("/image/cafard.png")}}" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Cafard</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's
-                    content.</p>
-                <a href="Prestation.html" class="btn btn-primary">Choisir</a>
-            </div>
-        </div>
+        {% endfor %}
     </nav>
 {% endblock %}
 

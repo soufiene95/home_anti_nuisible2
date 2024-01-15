@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block body %}
+    <h1>Prestations index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Prestation</th>
+                <th>Description</th>
+                <th>Image</th>
+                <th>Montant</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for prestation in prestations %}
+
+            <tr>
+                <td>{{ prestation.id }}</td>
+                <td>{{ prestation.prestation }}</td>
+                <td>{{ prestation.description }}</td>
+                <td>
+                    <img class="w-100" src="{{ asset('image/prestation/' ~ prestation.image) }}" alt="">
+                </td>
+                <td>{{ prestation.montant }}</td>
+                <td>
+                    <a href="{{ path('app_prestations_show', {'id': prestation.id}) }}">show</a>
+                    <a href="{{ path('app_prestations_edit', {'id': prestation.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_prestations_new') }}">Create new</a>
+{% endblock %}

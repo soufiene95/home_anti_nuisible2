@@ -7,7 +7,7 @@
 <body class="h-100 ">
     <main class="container my-5">
         <div class="row">
-            <div class="col-md-5 mx-auto">
+            <div class="col-md-5 mx-auto py-3 shadow border border-primary rounded">
             {% for flash_error in app.flashes('verify_email_error') %}
                 <div class="alert alert-danger">{{ flash_error }}</div>
             {% endfor %}
@@ -41,11 +41,8 @@
                             {{ form_widget(registrationForm.password.second, {'attr': {'class':'form-control'}}) }}
                     </div>
                     <div class="mb-3">
-                        <label for="registration_form_agreeTerms">
-                            {{ form_widget(registrationForm.agreeTerms) }}
-                                Accepter <a href="#" data-bs-toggle="modal" data-bs-target="#agreeTermsModal">les conditions générales d'utilisation</a>
-                        </label>
-
+                        <label for="registration_form_agreeTerms">{{ form_widget(registrationForm.agreeTerms) }} Accepter <a href="#" data-bs-toggle="modal" data-bs-target="#agreeTermsModal">les conditions générales d'utilisation</a></label>
+                            
                         <!-- Modal -->
                         <div class="modal fade" id="agreeTermsModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-scrollable">
@@ -60,7 +57,7 @@
                                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni rerum quam sint impedit, molestias beatae minima natus aperiam et quis sapiente accusantium laborum officia? Veritatis, porro iusto? Voluptas, cum dolor! Dolorum accusantium deleniti, sapiente animi quas delectus sit debitis, repudiandae libero culpa temporibus vero ratione incidunt natus in obcaecati praesentium, pariatur ipsum. Aperiam optio reprehenderit laborum quasi sed porro obcaecati. Ut laborum itaque excepturi vero eos dignissimos optio obcaecati, accusantium quidem officiis consectetur, ipsam voluptatem rerum pariatur, explicabo consequuntur architecto quas ducimus vitae delectus repellat quo! Neque rem ullam inventore provident sed natus repellendus quod cupiditate, vitae optio dolorum molestiae, distinctio sequi quam. Soluta tempore dignissimos odio ipsam quod animi aliquam dolorum minus molestias voluptas dolorem illum eligendi laboriosam corrupti ipsum ullam nostrum dolores doloremque modi, debitis, similique laborum! Iste, dicta et exercitationem ullam repellat illo sapiente nesciunt sit blanditiis temporibus quia, deleniti dolores numquam nemo optio odio ratione. Laboriosam?</p>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fermer</button>
                             </div>
                             </div>
                         </div>
