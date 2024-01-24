@@ -41,7 +41,9 @@
                             {{ form_widget(registrationForm.password.second, {'attr': {'class':'form-control'}}) }}
                     </div>
                     <div class="mb-3">
-                        <label for="registration_form_agreeTerms">{{ form_widget(registrationForm.agreeTerms) }} Accepter <a href="#" data-bs-toggle="modal" data-bs-target="#agreeTermsModal">les conditions générales d'utilisation</a></label>
+                        <label for="registration_form_agreeTerms">
+                        {{ form_widget(registrationForm.agreeTerms) }} 
+                        Accepter <a href="#" data-bs-toggle="modal" data-bs-target="#agreeTermsModal">les conditions générales d'utilisation</a></label>
                             
                         <!-- Modal -->
                         <div class="modal fade" id="agreeTermsModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -64,9 +66,13 @@
                         </div>
                                             </div>
                     <div>
-                        <input formnovalidate type="submit" class="btn btn-primary shadow" value="S'inscrire">
+                        <input formnovalidate type="submit"  class="w-100 btn btn-primary shadow" value="S'inscrire">
                     </div>
                 {{ form_end(registrationForm) }}
+                <div class="text-center mt-2">
+                    <p>Vous avez déjà un comptre? <a href="{{path('app_login')}}">Connectez-vous</a></p>
+                    <p><a href="{{path('accueil_index')}}">Retour a l'accueil</a></p>
+                </div>
             </div>
         </div>
     </main>
