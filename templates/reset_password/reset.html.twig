@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block body %}
+<body class="h-100 ">
+    <main class="container my-5">
+    <h2 class="text-center my-3 display-5">Nouveau mot de passe</h2>
+        <div class="row">
+            <div class="col-md-5 mx-auto py-3 shadow border border-primary rounded">
+                {{ form_start(resetForm) }}
+                <div class="mb-3">
+                <div class="text-danger">{{ form_errors(resetForm.plainPassword.first) }}</div>
+                    <label for="change_password_form_plainPassword_first">Nouveau mot de passe</label>
+                    {{ form_widget(resetForm.plainPassword.first, {'attr': {'class':'form-control'}}) }}
+                </div>
+                <div class="mb-3">
+                <div class="text-danger">{{ form_errors(resetForm.plainPassword.second) }}</div>
+                    <label for="change_password_form_plainPassword_second">Confirmation du nouveau mot de passe</label>
+                    {{ form_widget(resetForm.plainPassword.second, {'attr': {'class':'form-control'}}) }}
+                </div>
+                <div>
+                    <input formnovalidate type="submit" class="btn btn-primary shadow w-100" value="Réinitialiser le mot de passe">
+                </div>    
+                {{ form_end(resetForm) }}
+            </div>
+        </div>
+    </main>
+</body>
+{% endblock %}

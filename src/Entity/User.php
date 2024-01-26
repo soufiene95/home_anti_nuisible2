@@ -27,7 +27,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[Assert\Regex(
         pattern: '/^[0-9a-zA-Z-" áàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ"]+$/i',
         match: true,
-        message: 'Le prénom ne doit contenir ûniquement des lettres, des chiffres le tiret du milieu de l\'underscore',
+        message: 'Le prénom doit contenir au moins une lettre minuscule, majuscule, un chiffre et un caractères spécial.',
     )]
     #[ORM\Column(length: 255)]
     private ?string $firstName = null;
@@ -40,7 +40,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[Assert\Regex(
         pattern: '/^[0-9a-zA-Z-" áàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ"]+$/i',
         match: true,
-        message: 'Le nom ne doit contenir ûniquement des lettres, des chiffres le tiret du milieu de l\'underscore',
+        message: 'Le nom doit contenir au moins une lettre minuscule, majuscule, un chiffre et un caractères spécial.',
     )]
     #[ORM\Column(length: 255)]
     private ?string $lastName = null;
@@ -72,7 +72,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[Assert\Regex(
         pattern: "/^(?=.*[a-zà-ÿ])(?=.*[A-ZÀ-Ỳ])(?=.*[0-9])(?=.*[^a-zà-ÿA-ZÀ-Ỳ0-9]).{11,255}$/",
         match: true,
-        message: 'Le mot de passe ne doit contenir ûniquement des lettres, des chiffres le tiret du milieu de l\'underscore',
+        message: "Le mot de passe doit contenir au moins une lettre minuscule, majuscule, un chiffre et un caractères spécial.",
     )]
     #[Assert\NotCompromisedPassword(message: "Votre mot de passe est facilement priatable! Veuillez en choisir un autre.")]
     #[ORM\Column]
