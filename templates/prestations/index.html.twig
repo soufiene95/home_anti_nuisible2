@@ -1,12 +1,17 @@
-{% extends 'base.html.twig' %}
+{% extends 'base_admin.html.twig' %}
 
 
 
-{% block body %}
+{% block main %}
     <h1>Prestations index</h1>
 
-    <table class="table">
-        <thead>
+<div class="d-flex my-4">
+    <a class="btn btn-primary shadow" href="{{ path('app_prestations_new') }}"><i class="fas fa-plus"></i> Nouvelle préstation</a>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-striped table-hover table-bordered text-center">
+        <thead class="table-dark">
             <tr>
                 <th>Id</th>
                 <th>Prestation</th>
@@ -22,14 +27,13 @@
             <tr>
                 <td>{{ prestation.id }}</td>
                 <td>{{ prestation.prestation }}</td>
-                <td>{{ prestation.description }}</td>
+                <td>{{ prestation.description|slice(0,70) }} ...</td>
+                <td><img class="w-25" src="{{ asset('image/prestation/' ~ prestation.image) }}" alt=""></td>
+                <td>{{ prestation.montant }} €</td>
                 <td>
-                    <img class="w-100" src="{{ asset('image/prestation/' ~ prestation.image) }}" alt="">
-                </td>
-                <td>{{ prestation.montant }}</td>
-                <td>
-                    <a href="{{ path('app_prestations_show', {'id': prestation.id}) }}">show</a>
-                    <a href="{{ path('app_prestations_edit', {'id': prestation.id}) }}">edit</a>
+                    <a class=" text-primary" href="{{ path('app_prestations_show', {'id': prestation.id}) }}"><i class="fa-solid fa-eye"></i></a>
+                    <a class=" text-secondary" href="{{ path('app_prestations_edit', {'id': prestation.id}) }}"><i class="fas fa-edit"></i></a>
+                    <a class=" text-danger" href="{{ path('app_prestations_delete', {'id': prestation.id}) }}"><i class="fas fa-trash-alt"></i></a>
                 </td>
             </tr>
         {% else %}
@@ -39,6 +43,6 @@
         {% endfor %}
         </tbody>
     </table>
+</div>
 
-    <a href="{{ path('app_prestations_new') }}">Create new</a>
 {% endblock %}

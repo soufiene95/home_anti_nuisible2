@@ -3,11 +3,11 @@
 {# {% block title %}New Prestations{% endblock %} #}
 
 {% block body %}
-    <h1>Create new Prestations</h1>
+    <h1 class="text-center my-3 ">Créer une nouvelle préstation</h1>
     
     {{ include('prestations/_form.html.twig') }}
 
-    <a href="{{ path('app_prestations_index') }}">back to list</a>
+    <a class="btn btn-primary shadow m-5" href="{{ path('app_prestations_index') }}">Retour a la liste</a>
 {% endblock %}
 
 
