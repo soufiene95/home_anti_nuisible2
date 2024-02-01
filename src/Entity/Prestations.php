@@ -7,6 +7,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+// use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: PrestationsRepository::class)]
 class Prestations
@@ -22,6 +23,11 @@ class Prestations
     #[ORM\Column(type: Types::TEXT)]
     private ?string $description = null;
 
+    // #[Assert\File(
+    //     maxSize: '2048k',
+    //     extensions: ['pdf','jpg','jpeg','png','svg','webp'],
+    //     extensionsMessage: 'votre image est invalide.',
+    // )]
     #[ORM\Column(length: 255)]
     private ?string $image = null;
 

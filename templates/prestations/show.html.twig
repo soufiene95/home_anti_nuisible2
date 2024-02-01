@@ -3,8 +3,11 @@
 
 
 {% block body %}
-    <h1>Prestations</h1>
 
+<div class="col-md-8 mx-auto border border-solid border-primary rounded shadow">
+            <h1 class="text-center">Préstation</h1>        
+            
+    
     <table class="table">
         <tbody>
             <tr>
@@ -29,10 +32,13 @@
             </tr>
         </tbody>
     </table>
-
-    <a href="{{ path('app_prestations_index') }}">back to list</a>
-
-    <a href="{{ path('app_prestations_edit', {'id': prestation.id}) }}">edit</a>
-
-    {{ include('prestations/_delete_form.html.twig') }}
+    <div class="container">
+            <div class="d-flex">
+                <a class="btn btn-dark m-5 shadow" href="{{ path('app_prestations_index') }}">Retour à la liste</a>
+                <a class="btn btn-secondary m-5 shadow" href="{{ path('app_prestations_edit', {'id': prestation.id}) }}">Modifier</a>
+                {{ include('prestations/_delete_form.html.twig') }}
+            </div>
+    </div>
+    
+</div>
 {% endblock %}
