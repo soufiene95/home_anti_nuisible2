@@ -8,9 +8,7 @@
     <main class="container my-5">
         <div class="row">
             <div class="col-md-5 mx-auto py-3 shadow border border-primary rounded">
-            {% for flash_error in app.flashes('verify_email_error') %}
-                <div class="alert alert-danger">{{ flash_error }}</div>
-            {% endfor %}
+            {% include 'components/alert.html.twig' %}
                 {{ form_start(registrationForm) }}
                     <div class="row">
                         <div class="col-md-6 mb-3">

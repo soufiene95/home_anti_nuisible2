@@ -52,7 +52,7 @@ class LoginAuthenticator extends AbstractLoginFormAuthenticator
         $roles = $user->getRoles();
 
         if (in_array("ROLE_ADMIN", $roles)) {
-            return new RedirectResponse($this->urlGenerator->generate('app_admin_home'));
+            return new RedirectResponse($this->urlGenerator->generate('app_main'));
         }
 
         if (in_array("ROLE_USER", $roles)) {

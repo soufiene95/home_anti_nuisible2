@@ -1,0 +1,86 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block body %}
+<main>
+    <h1 class="text-center my-3">Contactez-nous</h1>
+
+    <div class="container border border-solide border-primary rounded">
+    {% include 'components/alert.html.twig' %}
+        <div class="row">
+        
+            {{ form_start(form) }}
+            <div class="row my-3">
+                <div class="col-md-6 mb-3">
+                    <label for="contact_firstName">Prénom <span class="text-danger">*</span></label>
+                    <div class="text-danger">{{ form_errors(form.firstName) }}</div>
+                    {{ form_widget(form.firstName, {'attr':{'class':'form-control', 'autofocus':'autofocus'}}) }}
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="contact_lastName">Nom <span class="text-danger">*</span></label>
+                    <div class="text-danger">{{ form_errors(form.lastName) }}</div>
+                    {{ form_widget(form.lastName, {'attr':{'class':'form-control', 'autofocus':'autofocus'}}) }}
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="contact_email">Email <span class="text-danger">*</span></label>
+                    <div class="text-danger">{{ form_errors(form.lastName) }}</div>
+                    {{ form_widget(form.email, {'attr':{'class':'form-control'}}) }}
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="contact_phone">Numéro de téléphone <span class="text-danger">*</span></label>
+                    <div class="text-danger">{{ form_errors(form.phone) }}</div>
+                    {{ form_widget(form.phone, {'attr':{'class':'form-control'}}) }}
+                </div>
+                <div class="mb-3">
+                    <label for="contact_message">Message <span class="text-danger">*</span></label>
+                    <div class="text-danger">{{ form_errors(form.message) }}</div>
+                    {{ form_widget(form.message, {'attr':{'class':'form-control','rows':'6'}}) }}
+                </div>
+                <div>
+                    <input formnovalidate type="submit" class="btn btn-primary shadow">
+                </div>
+            </div>
+            {{ form_end(form) }}
+        </div>
+    </div>
+
+</main>
+    {# <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Message</th>
+                <th>CreatedAt</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for contact in contacts %}
+            <tr>
+                <td>{{ contact.id }}</td>
+                <td>{{ contact.firstName }}</td>
+                <td>{{ contact.lastName }}</td>
+                <td>{{ contact.email }}</td>
+                <td>{{ contact.phone }}</td>
+                <td>{{ contact.message }}</td>
+                <td>{{ contact.createdAt ? contact.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>
+                    <a href="{{ path('app_contact_show', {'id': contact.id}) }}">show</a>
+                    <a href="{{ path('app_contact_edit', {'id': contact.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_contact_new') }}">Create new</a> #}
+{% endblock %}
