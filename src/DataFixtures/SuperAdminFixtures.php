@@ -30,7 +30,7 @@ class SuperAdminFixtures extends Fixture
     {
         $superAdmin = new User();
 
-        $superAdmin->setFirstName("Abdnour");
+        $superAdmin->setFirstName("Abdenour");
         $superAdmin->setLastName("Maali");
         $superAdmin->setEmail("homeantinuisible@gmail.com");
         $superAdmin->setRoles(["ROLE_SUPER_ADMIN", "ROLE_ADMIN", "ROLE_USER"]);

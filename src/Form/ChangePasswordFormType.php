@@ -36,7 +36,7 @@ class ChangePasswordFormType extends AbstractType
                             "message"=> "Le mot de passe ne doit contenir au moins une lettre minuscule, majuscule, un chiffre et un caractères spécial.",
                         ]),
                         new NotCompromisedPassword([
-                            "message" => "Votre mot de passe est facilement priatable! Veuillez en choisir un autre.",
+                            "message" => "Votre mot de passe est facilement piratable! Veuillez en choisir un autre.",
                         ]),
                     ],
                 ],
