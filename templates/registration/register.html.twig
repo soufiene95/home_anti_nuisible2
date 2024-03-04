@@ -39,28 +39,31 @@
 						{{ form_widget(registrationForm.password.second, {'attr': {'class':'form-control'}}) }}
 					</div>
 					<div class="mb-3">
-						<label for="registration_form_agreeTerms">{{ form_widget(registrationForm.agreeTerms) }} Accepter <a href="#" data-bs-toggle="modal" data-bs-target="#agreeTermsModal">les conditions générales d'utilisation</a></label>
-                    </div>
-						<!-- Modal -->
-						<div class="modal fade" id="agreeTermsModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-							<div class="modal-dialog modal-dialog-scrollable">
-								<div class="modal-content">
-									<div class="modal-header">
-										<h1 class="modal-title fs-5" id="exampleModalLabel">Les conditions générales d'utilisation.</h1>
-										<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-									</div>
-									<div class="modal-body">
-										<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et voluptate pariatur, earum ipsum laboriosam, eius cupiditate aperiam, repellendus aut culpa quaerat consequuntur ullam deleniti facilis! Maiores sunt et officiis earum ad cum obcaecati blanditiis quasi modi in cupiditate ipsum, sint vel eligendi libero tempora consectetur a ipsa quibusdam temporibus dicta iste tenetur nihil aliquid. Ea necessitatibus corporis dolorum, quo dignissimos harum consequatur architecto. Harum consequatur assumenda inventore blanditiis tempore iure. Quisquam excepturi, quidem ab exercitationem aspernatur maiores omnis tenetur vel ut adipisci cumque quaerat debitis earum facere perspiciatis magnam dignissimos quasi iste. Nemo illo, corrupti aperiam quidem pariatur quod excepturi nisi fugit! Amet ad cupiditate delectus animi nesciunt. Tempora repellat incidunt tenetur veritatis vitae aliquam libero sapiente totam quibusdam nostrum quam optio minus necessitatibus non dolore eaque, ratione id nulla ullam eius. Architecto possimus iste amet id non maiores labore numquam animi autem, voluptatum rerum. Sunt possimus eos eaque ipsa.</p>
-										<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui aut minus blanditiis atque consectetur consequatur voluptates, dolore, eum quos ullam, ab id. Sapiente excepturi corporis hic commodi recusandae pariatur molestias. Laboriosam unde necessitatibus iste consequuntur, commodi facilis. Fuga perferendis, totam dolor tempore architecto quas odio possimus animi iure. Hic, tempora.</p>
-										<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni rerum quam sint impedit, molestias beatae minima natus aperiam et quis sapiente accusantium laborum officia? Veritatis, porro iusto? Voluptas, cum dolor! Dolorum accusantium deleniti, sapiente animi quas delectus sit debitis, repudiandae libero culpa temporibus vero ratione incidunt natus in obcaecati praesentium, pariatur ipsum. Aperiam optio reprehenderit laborum quasi sed porro obcaecati. Ut laborum itaque excepturi vero eos dignissimos optio obcaecati, accusantium quidem officiis consectetur, ipsam voluptatem rerum pariatur, explicabo consequuntur architecto quas ducimus vitae delectus repellat quo! Neque rem ullam inventore provident sed natus repellendus quod cupiditate, vitae optio dolorum molestiae, distinctio sequi quam. Soluta tempore dignissimos odio ipsam quod animi aliquam dolorum minus molestias voluptas dolorem illum eligendi laboriosam corrupti ipsum ullam nostrum dolores doloremque modi, debitis, similique laborum! Iste, dicta et exercitationem ullam repellat illo sapiente nesciunt sit blanditiis temporibus quia, deleniti dolores numquam nemo optio odio ratione. Laboriosam?</p>
-									</div>
-									<div class="modal-footer">
-										<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fermer</button>
-									</div>
+						<label for="registration_form_agreeTerms">
+							{{form_widget(registrationForm.agreeTerms)}}
+							Veuillez accepter<a href="#" data-bs-toggle="modal" data-bs-target="#agreeTermsModal"> les conditions générales d'utilisation</a>
+						</label>
+					</div>
+
+					<!-- Modal -->
+					<div class="modal fade" id="agreeTermsModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+						<div class="modal-dialog modal-dialog-scrollable">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h1 class="modal-title fs-5" id="exampleModalLabel">Les conditions générales d'utilisation.</h1>
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et voluptate pariatur, earum ipsum laboriosam, eius cupiditate aperiam, repellendus aut culpa quaerat consequuntur ullam deleniti facilis! Maiores sunt et officiis earum ad cum obcaecati blanditiis quasi modi in cupiditate ipsum, sint vel eligendi libero tempora consectetur a ipsa quibusdam temporibus dicta iste tenetur nihil aliquid. Ea necessitatibus corporis dolorum, quo dignissimos harum consequatur architecto. Harum consequatur assumenda inventore blanditiis tempore iure. Quisquam excepturi, quidem ab exercitationem aspernatur maiores omnis tenetur vel ut adipisci cumque quaerat debitis earum facere perspiciatis magnam dignissimos quasi iste. Nemo illo, corrupti aperiam quidem pariatur quod excepturi nisi fugit! Amet ad cupiditate delectus animi nesciunt. Tempora repellat incidunt tenetur veritatis vitae aliquam libero sapiente totam quibusdam nostrum quam optio minus necessitatibus non dolore eaque, ratione id nulla ullam eius. Architecto possimus iste amet id non maiores labore numquam animi autem, voluptatum rerum. Sunt possimus eos eaque ipsa.</p>
+									<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui aut minus blanditiis atque consectetur consequatur voluptates, dolore, eum quos ullam, ab id. Sapiente excepturi corporis hic commodi recusandae pariatur molestias. Laboriosam unde necessitatibus iste consequuntur, commodi facilis. Fuga perferendis, totam dolor tempore architecto quas odio possimus animi iure. Hic, tempora.</p>
+									<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni rerum quam sint impedit, molestias beatae minima natus aperiam et quis sapiente accusantium laborum officia? Veritatis, porro iusto? Voluptas, cum dolor! Dolorum accusantium deleniti, sapiente animi quas delectus sit debitis, repudiandae libero culpa temporibus vero ratione incidunt natus in obcaecati praesentium, pariatur ipsum. Aperiam optio reprehenderit laborum quasi sed porro obcaecati. Ut laborum itaque excepturi vero eos dignissimos optio obcaecati, accusantium quidem officiis consectetur, ipsam voluptatem rerum pariatur, explicabo consequuntur architecto quas ducimus vitae delectus repellat quo! Neque rem ullam inventore provident sed natus repellendus quod cupiditate, vitae optio dolorum molestiae, distinctio sequi quam. Soluta tempore dignissimos odio ipsam quod animi aliquam dolorum minus molestias voluptas dolorem illum eligendi laboriosam corrupti ipsum ullam nostrum dolores doloremque modi, debitis, similique laborum! Iste, dicta et exercitationem ullam repellat illo sapiente nesciunt sit blanditiis temporibus quia, deleniti dolores numquam nemo optio odio ratione. Laboriosam?</p>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fermer</button>
 								</div>
 							</div>
 						</div>
-					
+					</div>
 					<div>
 						<input formnovalidate type="submit" class="w-100 btn btn-primary shadow" value="S'inscrire">
 					</div>

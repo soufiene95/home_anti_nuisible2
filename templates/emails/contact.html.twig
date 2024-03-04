@@ -5,14 +5,8 @@
 <p>Voici ses coordonnées : </p>
 <ul>
     <li><strong>Email</strong> : {{contact_email}}</li>
-    {% if contact_phone is not empty %}
-        <li><strong>Phone</strong> : {{contact_phone}}</li>    
-    {% endif %}
+    <li><strong>Phone</strong> : {{contact_phone}}</li>    
 </ul>
-
-{% if contact_phone is empty %}
-    <p><strong>{{contact_first_name|capitalize}}</strong> n'a pas laissé de numéro de téléphone.</p>
-{% endif %}
 
 <p><u>Voici le message</u> : </p>
 <p>{{contact_message|nl2br}}</p>

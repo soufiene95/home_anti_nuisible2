@@ -15,10 +15,12 @@
 
 		{# No SEO for admin #}
 		<meta name="robots" content="noindex, nofollow">
-		
-		<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.5/main.min.js" integrity="sha256-gqhxNoRraWeCppNZHezKGig+uPdmR/cntAtJsdTkm5A=" crossorigin="anonymous"></script>
+		{# le lien de bootstrap 5 #}
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+		{# Le lien du calendrier #}
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.5/main.min.css" integrity="sha256-EAq+X/hXd44MlSOCkm9hchPJT78vQ4UBTT7FBkQl9qE=" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-		{# A css part of webpack encore #}
+		
 		{# {% block webpack_encore_stylesheets %}
 								{{ encore_entry_link_tags('app') }}
 								{% endblock %} #}
@@ -230,8 +232,8 @@
 					</main>
 				</div>
 			</div>
-			
-			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.5/main.min.css" integrity="sha256-EAq+X/hXd44MlSOCkm9hchPJT78vQ4UBTT7FBkQl9qE=" crossorigin="anonymous">
+			{# Le script de du calnedrier#}
+			<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.5/main.min.js" integrity="sha256-gqhxNoRraWeCppNZHezKGig+uPdmR/cntAtJsdTkm5A=" crossorigin="anonymous"></script>
 			{# Le script de Bootstrap 5 #}
 			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 			{% block javascripts %}

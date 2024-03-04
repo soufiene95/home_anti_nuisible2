@@ -25,18 +25,15 @@
                 <a href="/">
                     <img src="{{asset("/image/H-A-N.JPG")}}" width="200" height="" ></img>
                 </a>
-                {# {% if app.user %}
-                    <a href="{{path('app_admin_home')}}">
-                        <h1 class="text-primary">admin</h1>
+                {% if app.user %}
+                    <a href="{{path('app_main')}}">
+                        <h1 class="text-primary">Tableau de bord</h1>
                     </a>
-                    <a href="{{path('app_user_home')}}">
-                        <h1 class="text-primary">user</h1>
-                    </a>
-                {% else %} #}
+                {% else %}
                     <a href="{{path('app_login')}}">
                         <h1 class="text-primary">HOME ANTI NUISIBLE</h1>
                     </a>
-                {# {% endif %} #}
+                {% endif %}
             </div>
         </div>
 {% endblock %}
